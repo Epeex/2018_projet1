@@ -1,2 +1,5 @@
-# 2018_projet1
-Projet 1 groupe 5
+# Projet Groupe 5
+HeXart Care 
+----------
+  HeXart Care est une startup très prometteuse spécialisée dans l’électronique et l’informatique. 
+Son dernier projet innovant est un lecteur portatif grand public de la fréquence cardiaque.
