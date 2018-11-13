@@ -3,4 +3,5 @@
 .piolibdeps
 .clang_complete
 .gcc-flags.json
-platform.ini
+ platform.ini
+ .travis.yml
