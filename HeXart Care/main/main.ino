@@ -6,7 +6,7 @@ typedef struct pouls {
 } Pouls;
 
 int a = 0, b = 0, c = 0 ;
-const int SEUILMAX = 424, SEUILMIN = 300;
+const int SEUILMAX = 424, SEUILMIN = 350;
 
 Pouls pouls;
 
