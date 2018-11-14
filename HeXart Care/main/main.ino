@@ -2,41 +2,44 @@
 
 typedef struct pouls {
   int bpm;
-  int time;
+  int mil;
 } Pouls;
 
-int a, b, c ;
-const int SEUIL = 50;
+int a = 0, b = 0, c = 0 ;
+const int SEUILMAX = 424, SEUILMIN = 300;
 
 Pouls pouls;
 
 void setup() {
+  Serial.begin(9600);
   pinMode("A0", INPUT);
 }
 
 
 void loop() {
-
   c = 0;
   do {                                            //Tant que c=0 on continue la boucle quipermet de recupérer c qui est le delta entre 2 battements.
-    if (!a && analogRead(0) > SEUIL) {
-      a = pulse_a(analogRead(0), millis());
+    if (b == 0 && analogRead(0) < SEUILMAX && analogRead(0) > SEUILMIN) {
+      a = millis();
+      delay(330);
     }
-    if (!b && a && analogRead(0) > SEUIL) {
-      b = pulse_b(analogRead(0), millis());
+
+    if (a != 0 && analogRead(0) < SEUILMAX && analogRead(0) > SEUILMIN) {
+      b = millis();
     }
-    if (a && b) {
+    if (a != 0 && b != 0) {
       c = b - a;
     }
-  } while (!c);
-  a = 0;
-  b = 0;
+  } while (c == 0);
 
 
   pouls.bpm = mstobpm(c);
-  pouls.time = millis();
+  pouls.mil = millis();
 
-  Serial.print(pouls.time);
-  Serial.print(pouls.bpm);
-
+  Serial.println(c);
+  Serial.println(analogRead(0));
+  Serial.print(pouls.mil);
+  Serial.print(";");
+  Serial.println(pouls.bpm);
+  delay(500);
 }

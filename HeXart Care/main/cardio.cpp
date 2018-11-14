@@ -1,17 +1,8 @@
 #include "cardio.h"
 
-int pulse_a(int mil) {
-  int a = mil;
-  return a;
-}
-
-int pulse_b(int mil) {
-  int b = mil;
-  return b;
-}
 
 int mstobpm (int ms) {              //Permet de convertir le temps entre 2 battements en bpm
-  int bpm = (1 / (ms * 0, 001)) * 60;
+  int bpm = ((1 / ms) * 60000);
   return bpm;
 }
 
