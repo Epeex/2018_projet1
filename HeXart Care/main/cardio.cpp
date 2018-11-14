@@ -2,7 +2,7 @@
 
 
 int mstobpm (int ms) {              //Permet de convertir le temps entre 2 battements en bpm
-  int bpm = ((1 / ms) * 60000);
+  int bpm = 60000 / ms;
   return bpm;
 }
 
