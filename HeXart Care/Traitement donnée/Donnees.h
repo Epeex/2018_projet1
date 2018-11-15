@@ -3,6 +3,10 @@
 #include <math.h>
 #include <string.h>
 
+//Manipulation
+
+
+
 typedef struct Ligne {
 	int temp;
 	int poul;
