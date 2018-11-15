@@ -1,14 +1,14 @@
 #include "cardio.h"
 
 typedef struct pouls {              //Définition d'une struct pour les bpm par rapport au temps
-  int bpm
+  int bpm;
   unsigned long int mil;
 } Pouls;
 
 Pouls pouls;
 
 
-int a = 0, b = 0, c = 0 ;
+int a = 0, b = 0, c = 0 ;                   // a:
 const int SEUILMAX = 424, SEUILMIN = 350;   // On définit le seuil pour lequel un battement est reconnu et ne pas prendre en compte le "contrepouls"
 
 
@@ -31,7 +31,7 @@ void loop() {
     }
     else if (a != 0 && analogRead(0) < SEUILMAX && analogRead(0) > SEUILMIN) {
       b = millis();
-      c = b - a;
+      c = b - a;            //Temps écoulé entre deux battements
     }
     else {
       c = 0;

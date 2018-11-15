@@ -15,25 +15,25 @@ void setup() {
 void loop() {
   if (Serial.available()) {
     msg=Serial.read()-48;
-    
-    //Toute les led allumer puis etainte
+
+    //Toute les led allumées puis eteintes
     if (msg==1) {
       all_on();
-    
-    //1 Led allumer sur x
+
+    //1 Led allumée sur x
     } else if (msg==2) {
       do {
         x=Serial.read();
       } while (x==-1);
       one_on_x_on(x-48);
-    
+
     //allumer une led précise
     } else if (msg==3) {
       do {
         x=Serial.read();
       } while (x==-1);
       one_on(x-48);
-    
+
     //allumer led chenille
     } else if (msg==4) {
       chenille();
@@ -54,8 +54,8 @@ void loop() {
         varload=9;
       }
     }
-    
-    
+
+
     while (Serial.available()){
       Serial.read();
     }
