@@ -19,8 +19,8 @@ void draw() {
   }
 }
 
-void keyPressed(){
+void keyPressed() {
   output.flush();
   output.close();
-  exit(); 
+  exit();
 }
