@@ -3,7 +3,7 @@
 
 int _var_load = 9;
 
-void all_on() { //allumer et ettendre toute les leds
+void all_on() { //allumer et eteindre toute les leds
 	for (int i=2;i<=11;i++) {
 		digitalWrite(i,HIGH);
 	}
@@ -24,9 +24,9 @@ void one_on_x_on(int x) { //allumer et etteindre une led sur x
 }
 
 void one_on(int x) { //allumer une led (on choisis la led n°x)
-	digitalWrite(x+2,HIGH);
+	digitalWrite(x+1,HIGH);
 	delay(100);
-	digitalWrite(x+2,LOW);
+	digitalWrite(x+1,LOW);
 }
 
 void chenille() { //allumer les led en mode chenille !
@@ -63,23 +63,21 @@ void loading() { //allumer les led en mode loading (une barre qui se remplis pet
 }
 
 void tourn() { //allumer les led comme si une élise tournait
-  for (int j=0;j<3;j++) {
-    for (int i=2,j=7;i<7;i++,j++) {
-      digitalWrite(i,HIGH);
-      digitalWrite(j,HIGH);
-      if (i!=2) {
-        digitalWrite(i-1,LOW);
-        digitalWrite(j-1,LOW);
-      }
-      delay(100);
+  for (int i=2,j=7;i<7;i++,j++) {
+    digitalWrite(i,HIGH);
+    digitalWrite(j,HIGH);
+    if (i!=2) {
+      digitalWrite(i-1,LOW);
+      digitalWrite(j-1,LOW);
     }
-    digitalWrite(6,LOW);
-    digitalWrite(11,LOW);
+    delay(50);
   }
+  digitalWrite(6,LOW);
+  digitalWrite(11,LOW);
 }
 
 void load() { //pareille que loading mais on remplis une led par battement
-  if (_var_load!=0) {
+  if (_var_load!=-1) {
     for (int i=2;i<=_var_load+2;i++) {
       digitalWrite(i,HIGH);
       if (i!=2) { digitalWrite(i-1,LOW); }
