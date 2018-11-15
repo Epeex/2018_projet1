@@ -1,1 +1,1 @@
-const int parametre =5;
+const int parametre = 5;

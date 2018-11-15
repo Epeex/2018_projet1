@@ -5,7 +5,7 @@
 void write_script(char parametre_choisit){
     FILE* fichier = NULL;
     fichier = fopen("param.h", "w+");
-    fputs("const int parametre =", fichier);
+    fputs("const int parametre = ", fichier);
     fputc(parametre_choisit, fichier);
     fputc(';', fichier);
     fclose(fichier);
