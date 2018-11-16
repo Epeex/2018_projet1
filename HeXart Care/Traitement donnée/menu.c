@@ -20,7 +20,7 @@ int menu_principal(){
   return c;
 }
 
-int menu_1(){
+int menu_2(){
   int c;                                                                         // Variable du choix.
   printf("Choisissez un ordre:\n");
   printf("1- Croissant.\n");
