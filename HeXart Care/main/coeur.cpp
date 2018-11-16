@@ -1,7 +1,7 @@
 #include "param.h"
 #include <Arduino.h>
 
-int _var_load = 9;
+int _var_load = 9; //Variable globale nécessaire a la fonction load
 
 void all_on() { //allumer et eteindre toute les leds
 	for (int i=2;i<=11;i++) {
@@ -23,7 +23,7 @@ void one_on_x_on(int x) { //allumer et etteindre une led sur x
 	}
 }
 
-void one_on(int x) { //allumer une led (on choisis la led n°x)
+void one_on(int x) { //allumer uniquement la led n°x
 	digitalWrite(x+1,HIGH);
 	delay(100);
 	digitalWrite(x+1,LOW);
@@ -36,7 +36,7 @@ void chenille() { //allumer les led en mode chenille !
 		} else {
 			digitalWrite(i-10,LOW);
 		}
-		delay(100);
+		delay(10);
 	}
 }
 
@@ -76,7 +76,7 @@ void tourn() { //allumer les led comme si une élise tournait
   digitalWrite(11,LOW);
 }
 
-void load() { //pareille que loading mais on remplis une led par battement
+void load() { //pareille que loading mais on remplis une led par une par battement
   if (_var_load!=-1) {
     for (int i=2;i<=_var_load+2;i++) {
       digitalWrite(i,HIGH);
