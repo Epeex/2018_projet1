@@ -5,7 +5,7 @@
 #include <stdio.h>
 
 
-void tri(tab[n]);
+void quicksort(int number[25],int first,int last);
 
 
 
