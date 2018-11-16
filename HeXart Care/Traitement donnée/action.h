@@ -14,5 +14,6 @@ int searchmilis(Ligne*,int,int,int*,int);
 int searchpoul(Ligne*,int,int,int*,int);
 int searchmilisborn(Ligne*,int,int,int,int*,int);
 int searchpoulborn(Ligne*,int,int,int,int*,int);
+void (Ligne *tab, int n);
 
 #endif
