@@ -74,7 +74,7 @@ int main() {
 				int a;
 				int b;
 				menu_5(&a, &b);
-				printf("La moyenne est de %i bpm\n", moyenne(Tableau,n,a,b));
+				printf("La moyenne est de %fl bpm\n", moyenne(Tableau,n,a,b));
 				break;
 				case 7:											// Nombre de lignes de données
 				printf("Il y a %d ligne de données\n",n);
