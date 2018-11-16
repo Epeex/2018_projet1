@@ -1,5 +1,9 @@
 #include "Donnees.h"
 
+typedef struct Ligne {
+	int temp;
+	int poul;
+} Ligne;
 
 int lectureCsv(Ligne *Tableau) { //Ligne Tableau[100];
     char ligne[100];

@@ -89,7 +89,7 @@ void tri_croissant_temps(Ligne *tab, int const n){
 }
 
 
-void tri_decroissant_tempspoul(Ligne *tab, int const n){
+void tri_decroissant_temps(Ligne *tab, int const n){
 	/* Booléen marquant l'arrêt du tri si le tableau est ordonné */
 	int en_desordre = TRUE;
 	/* Boucle de répétition du tri et le test qui
