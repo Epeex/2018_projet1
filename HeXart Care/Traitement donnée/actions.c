@@ -150,7 +150,7 @@ float moyenne(Ligne *tab,int n, int borninf, int bornsup) {
 		int somme=0,diviseur=0;
 		for (int i=0;i<n;i++) {
 			if (tab[i].temp>=borninf && tab[i].temp<=bornsup) {
-			somme+=tab[i].poul
+			somme+=tab[i].poul;
 			diviseur++;
 			}
 		}
@@ -160,7 +160,7 @@ float moyenne(Ligne *tab,int n, int borninf, int bornsup) {
 			return -1;
 		}
 	} else {
-		return -1.
+		return -1;
 	}
 }
 

@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "menu.h"
-#include "action.h"
+#include "actions.h"
 
 int main() {
 	Ligne Tableau[1000];									//Création d'un tableau de taille 1000
