@@ -14,6 +14,7 @@ int menu_principal(){
   printf("6- Afficher la moyenne dans une plage de temps.\n");
   printf("7- Afficher le nombre de lignes de données.\n");
   printf("8- Rechercher et afficher le max et le min.\n");
+  printf("0- Quitter le menu");
   printf("\tChoix : ");
   scanf("%d",&c );
   printf("\n\n");
@@ -41,8 +42,8 @@ int menu_4(){
 
 void menu_5(int *a, int *b){                                                  // Passage de la fonction par paramètre afon d'en ressortir 2 valeurs.
   printf("Donner la première borne (en ms): ")
-  scanf("%d", a);
+  scanf("%d", &a);
   printf("\nDonner la deuxième borne (en ms): ");
-  scanf("%d", b);
+  scanf("%d", &b);
   printf("\n\n");
 }
