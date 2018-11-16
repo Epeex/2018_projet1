@@ -6,7 +6,7 @@
 int menu_principal();
 int menu_1();
 int menu_4();
-void menu_5();
+void menu_5(int*,int*);
 
 
 #endif

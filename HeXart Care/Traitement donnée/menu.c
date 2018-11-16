@@ -13,26 +13,35 @@ int menu_principal(){
   printf("5- Afficher la moyenne dans une plage de temps.\n", );
   printf("6- Afficher le nombre de lignes de données.\n", );
   printf("7- Rechercher et afficher le max et le min.\n", );
-  scanf("Choix: %d",c );
+  printf("\tChoix : ");
+  scanf("%d",&c );
+  printf("\n\n");
   return c;
 }
 
 int menu_1(){
   int c;                                                                         // Variable du choix.
   printf("Choisissez un ordre:\n");
-  printf("1- Croissant.");
+  printf("1- Croissant.\n");
   printf("2- Décroissant\n");
-  scanf("Choix: %d",c );
+  printf("\tChoix : ");
+  scanf("%d",&c );
+  printf("\n\n");
   return c;
 }
 
 int menu_4(){
   int c;
-  scanf("Quel temps voulez vous rechercher (en ms) ?: %d",c );
+  printf("Quel temps voulez vous rechercher (en ms) ?: ")
+  scanf("%d",&c );
+  printf("\n\n");
   return c;
 }
 
-void menu_5(int *a, int *b){                                                      // Passage de la fonction par paramètre afon d'en ressortir 2 valeurs.
-  scanf("Donner la première borne (en ms): %d", *a);
-  scanf("Donner la deuxième borne (en ms): %d", *b);
+void menu_5(int *a, int *b){                                                  // Passage de la fonction par paramètre afon d'en ressortir 2 valeurs.
+  printf("Donner la première borne (en ms): ")
+  scanf("%d", a);
+  printf("\nDonner la deuxième borne (en ms): ");
+  scanf("%d", b);
+  printf("\n\n");
 }
