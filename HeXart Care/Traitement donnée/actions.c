@@ -68,7 +68,7 @@ int searchpoulborn(Ligne *tab,int n,int poulinf,int poulsup,int *tabrep,int nrep
 
 
 
-void (Ligne *tab, int n){
+void print_tab (Ligne *tab, int n){
 	for (size_t i = 0; i < n; i++) {
 		printf("%d;%d\n",tab[i].temps, tab[i].poul );
 	}
