@@ -4,9 +4,12 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+typedef struct Ligne {
+	int temp;
+	int poul;
+} Ligne;
 
-void tri(tab[n]);
-
+void tri(Ligne tab[n],int n);
 
 
 #endif
