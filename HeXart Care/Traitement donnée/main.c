@@ -5,34 +5,34 @@
 #include "Donnees.h"
 
 int main() {
-	Ligne Tableau[1000]
+	Ligne Tableau[1000];
 	int n = lectureCsv(Tableau);
 
 	switch (menu_principal()) {
 		case 1:
-			print_tab(Tableau, 1000);
+			print_tab(Tableau,n);
 			break;
 		case 2:
 			switch (menu_2()) {
 				case 1:
-					tri_croissant_pouls(Tableau, 1000);
-					print_tab(Tableau, 1000);
+					tri_croissant_pouls(Tableau, n);
+					print_tab(Tableau, n);
 					break;
 				case 2:
-					tri_decroissant_pouls(Tableau, 1000);
-					print_tab(Tableau, 1000);
+					tri_decroissant_pouls(Tableau, n);
+					print_tab(Tableau, n);
 					break;
 			}
 			break;
 		case 3:
 			switch (menu_2()){
 				case 1:
-					tri_croissant_temps(Tableau, 1000);
-					print_tab(Tableau, 1000);
+					tri_croissant_temps(Tableau, n);
+					print_tab(Tableau, n);
 					break;
 				case 2:
-					tri_decroissant_temps(Tableau, 1000);
-					print_tab(Tableau, 1000);
+					tri_decroissant_temps(Tableau, n);
+					print_tab(Tableau, n);
 					break;
 			}
 			break;
@@ -77,13 +77,16 @@ int main() {
 			printf("La moyenne est de %d bpm\n", moyenne(Tableau,n,a,b));
 			break;
 		case 7:
-
+			printf("Il y a %d ligne de données\n",n);
 			break;
 		case 8:
-
+			int min=-1;
+			int max=-1;
+			minmax(Tableau,n,&min,&max);
+			printf("Le poul min est de %d et max %d\n",min,max);
 			break;
 		case default:
-
+			printf("Nombre pas disponible, refaite votre choix.\n");
 	}
 	return 0;
 }
