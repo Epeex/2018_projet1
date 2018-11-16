@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdlib>
+#include <stdlib.h>
 #include "menu.h"
 
 
@@ -34,14 +34,14 @@ int menu_2(){
 
 int menu_4(){
   int c;
-  printf("Quel temps voulez vous rechercher (en ms) ?: ")
+  printf("Quel temps voulez vous rechercher (en ms) ?: ");
   scanf("%d",&c );
   printf("\n\n");
   return c;
 }
 
 void menu_5(int *a, int *b){                                                  // Passage de la fonction par paramètre afon d'en ressortir 2 valeurs.
-  printf("Donner la première borne (en ms): ")
+  printf("Donner la première borne (en ms): ");
   scanf("%d", &a);
   printf("\nDonner la deuxième borne (en ms): ");
   scanf("%d", &b);

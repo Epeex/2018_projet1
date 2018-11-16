@@ -1,7 +1,8 @@
 #include <stdio.h>
-#include <stdlib>
+#include <stdlib.h>
 #include "action.h"
-
+#define TRUE 1
+#define FALSE 0
 
 void tri_croissant_pouls(Ligne *tab, int const n){
 	/* Booléen marquant l'arrêt du tri si le tableau est ordonné */
@@ -44,7 +45,7 @@ void tri_decroissant_pouls(Ligne *tab, int const n){
 		for (int j = 0; j < n-1; j++)
 		{
 			/* Si les 2 éléments sont mal triés */
-			if(tab[j].poul <temp tab[j+1].poul)
+			if(tab[j].poul < tab[j+1].poul)
 			{
 				/* Inversion des 2 éléments */
  				int tmp = tab[j+1].poul;
@@ -162,7 +163,7 @@ float moyenne(Ligne *tab,int n, int borninf, int bornsup) {
 	}
 }
 
-void minmax(Ligne *tab,int n,int *min,int *max) {
+void min_max(Ligne *tab, int n, int *min, int *max) {
 	for (int i=0;i<n;i++) {
 		if (tab[i].poul>*max) {
 			*max=tab[i].poul;

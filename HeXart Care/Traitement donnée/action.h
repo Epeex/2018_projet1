@@ -16,6 +16,6 @@ int searchmilisborn(Ligne*,int,int,int,int*,int);
 int searchpoulborn(Ligne*,int,int,int,int*,int);
 void print_tab(Ligne*, int);
 float moyenne(Ligne*,int,int,int);
-void minmax(Ligne*,int,int*,int*)
+void min_max(Ligne*,int,int*,int*);
 
 #endif
