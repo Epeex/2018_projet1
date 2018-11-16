@@ -55,6 +55,16 @@ float moyenne(Ligne *tab,int n, int borninf, int bornsup) {
 	}
 }
 
+void minmax(Ligne *tab,int n,int *min,int *max) {
+	for (int i=0;i<n;i++) {
+		if (tab[i].poul>*max) {
+			*max=tab[i].poul;
+		} else if (tab[i].poul<*min) {
+			*min=tab[i].poul;
+		}
+	}
+}
+
 
 void print_tab(Ligne *tab, int n){
 	for (size_t i = 0; i < n; i++) {
