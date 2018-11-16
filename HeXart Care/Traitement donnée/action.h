@@ -9,7 +9,10 @@ typedef struct Ligne {
 	int poul;
 } Ligne;
 
-void tri(Ligne tab[n],int n);
+void tri_croissant_pouls(Ligne *tab, int n);
+void tri_decroissant_pouls(Ligne *tab, int n);
+void tri_croissant_temps(Ligne *tab, int n);
+void tri_decroissant_temps(Ligne *tab, int n);
 int searchmilis(Ligne*,int,int,int*,int);
 int searchpoul(Ligne*,int,int,int*,int);
 int searchmilisborn(Ligne*,int,int,int,int*,int);
