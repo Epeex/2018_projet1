@@ -1,3 +1,6 @@
+#ifndef Donnees.h
+#define Donnees.h
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <math.h>
@@ -13,3 +16,5 @@ typedef struct Ligne {
 } Ligne;
 
 int lectureCsv(Ligne*); //Sort la taille du tableau
+
+#endif
