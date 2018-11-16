@@ -1,9 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "main.c"
 #define TRUE 1
 #define FALSE 0
+
+
 
 void tri_croissant_pouls(Ligne *tab, int const n){
 	/* Booléen marquant l'arrêt du tri si le tableau est ordonné */
@@ -177,6 +178,6 @@ void min_max(Ligne *tab, int n, int *min, int *max) {
 
 void print_tab(Ligne *tab, int n){
 	for (size_t i = 0; i < n; i++) {
-		printf("%d - %d; %d\n",i,tab[i].temps, tab[i].poul );
+		printf("%d - %d; %d\n",i,tab[i].temp, tab[i].poul );
 	}
 }
