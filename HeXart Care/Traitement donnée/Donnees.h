@@ -1,5 +1,5 @@
-#ifndef Donnees.h
-#define Donnees.h
+#ifndef Donneesh
+#define Donneesh
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -7,8 +7,6 @@
 #include <string.h>
 
 //Manipulation
-
-
 
 typedef struct Ligne {
 	int temp;

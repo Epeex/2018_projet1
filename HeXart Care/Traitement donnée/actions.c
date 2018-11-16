@@ -1,11 +1,10 @@
 #include <stdio.h>
-#include <stdlib>
+#include <stdlib.h>
 #include "action.h"
-
 #define TRUE 1
 #define FALSE 0
 
-void tri_croissant_pouls(Ligne *tab, int n) {
+void tri_croissant_pouls(Ligne *tab, int const n){
 	/* Booléen marquant l'arrêt du tri si le tableau est ordonné */
 	int en_desordre = TRUE;
 	/* Boucle de répétition du tri et le test qui
@@ -21,9 +20,9 @@ void tri_croissant_pouls(Ligne *tab, int n) {
 			if(tab[j].poul > tab[j+1].poul)
 			{
 				/* Inversion des 2 éléments */
- 				int tmp = tab[j+1];
- 				tab[j+1] = tab[j];
- 				tab[j] = tmp;
+ 				int tmp = tab[j+1].poul;
+ 				tab[j+1].poul = tab[j].poul;
+ 				tab[j].poul = tmp;
 
  				/* Le tableau n'est toujours pas trié */
 				en_desordre = TRUE;
@@ -32,7 +31,8 @@ void tri_croissant_pouls(Ligne *tab, int n) {
 	}
 }
 
-void tri_decroissant_pouls(Ligne *tab, int n) {
+
+void tri_decroissant_pouls(Ligne *tab, int const n){
 	/* Booléen marquant l'arrêt du tri si le tableau est ordonné */
 	int en_desordre = TRUE;
 	/* Boucle de répétition du tri et le test qui
@@ -48,9 +48,9 @@ void tri_decroissant_pouls(Ligne *tab, int n) {
 			if(tab[j].poul < tab[j+1].poul)
 			{
 				/* Inversion des 2 éléments */
- 				int tmp = tab[j+1];
- 				tab[j+1] = tab[j];
- 				tab[j] = tmp;
+ 				int tmp = tab[j+1].poul;
+ 				tab[j+1].poul = tab[j].poul;
+ 				tab[j].poul = tmp;
 
  				/* Le tableau n'est toujours pas trié */
 				en_desordre = TRUE;
@@ -59,7 +59,7 @@ void tri_decroissant_pouls(Ligne *tab, int n) {
 	}
 }
 
-void tri_croissant_temps(Ligne *tab, int n) {
+void tri_croissant_temps(Ligne *tab, int const n){
 	/* Booléen marquant l'arrêt du tri si le tableau est ordonné */
 	int en_desordre = TRUE;
 	/* Boucle de répétition du tri et le test qui
@@ -75,9 +75,9 @@ void tri_croissant_temps(Ligne *tab, int n) {
 			if(tab[j].temp > tab[j+1].temp)
 			{
 				/* Inversion des 2 éléments */
- 				int tmp = tab[j+1];
- 				tab[j+1] = tab[j];
- 				tab[j] = tmp;
+ 				int tmp = tab[j+1].temp;
+ 				tab[j+1].temp = tab[j].temp;
+ 				tab[j].temp = tmp;
 
  				/* Le tableau n'est toujours pas trié */
 				en_desordre = TRUE;
@@ -86,7 +86,8 @@ void tri_croissant_temps(Ligne *tab, int n) {
 	}
 }
 
-void tri_decroissant_temps(Ligne *tab, int n) {
+
+void tri_decroissant_tempspoul(Ligne *tab, int const n){
 	/* Booléen marquant l'arrêt du tri si le tableau est ordonné */
 	int en_desordre = TRUE;
 	/* Boucle de répétition du tri et le test qui
@@ -102,9 +103,9 @@ void tri_decroissant_temps(Ligne *tab, int n) {
 			if(tab[j].temp < tab[j+1].temp)
 			{
 				/* Inversion des 2 éléments */
- 				int tmp = tab[j+1];
- 				tab[j+1] = tab[j];
- 				tab[j] = tmp;
+ 				int tmp = tab[j+1].temp;
+ 				tab[j+1].temp = tab[j].temp;
+ 				tab[j].temp = tmp;
 
  				/* Le tableau n'est toujours pas trié */
 				en_desordre = TRUE;
@@ -159,6 +160,16 @@ float moyenne(Ligne *tab,int n, int borninf, int bornsup) {
 		}
 	} else {
 		return -1.
+	}
+}
+
+void min_max(Ligne *tab, int n, int *min, int *max) {
+	for (int i=0;i<n;i++) {
+		if (tab[i].poul>*max) {
+			*max=tab[i].poul;
+		} else if (tab[i].poul<*min) {
+			*min=tab[i].poul;
+		}
 	}
 }
 
