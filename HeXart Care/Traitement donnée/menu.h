@@ -1,5 +1,5 @@
-#ifndef menu.h
-#define menu.h
+#ifndef menuh
+#define menuh
 
 #include <stdio.h>
 
