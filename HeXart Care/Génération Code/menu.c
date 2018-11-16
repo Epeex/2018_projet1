@@ -4,8 +4,8 @@
 #include "generationCode.h"
 
 void afficher_menus(){
-    int choix=0;
-    int parametre_allumage=0;
+    int choix=0;                                            //variable choix de l'utilisateur
+    int parametre_allumage=0;                               //variable du choix 2.
     printf("Veuillez selectionner une fonction :\n\n");
     printf("1: Toutes les leds allumées\n");
     printf("2: Une led allumé sur x led\n");
@@ -17,14 +17,14 @@ void afficher_menus(){
     scanf("%i",&choix);
     printf("Vous avez sélectionné le choix %i\n\n",choix);
 
-    switch (choix) {
+    switch (choix) {                                           // Reconnaissance du choix de l'utilisateur
         case 1: //all_on()
-            write_script('1', '0');
-            break;
+            write_script('1', '0');                             // dans le cas ou le 2éme paramètre n'est pas utilisé, il reste a 0.
+            break;                                              //permet de sortir du switch
 
         case 2://one_on_x_on()
             printf("1 led toutes les combiens ? (toutes les 2 leds par exemple)\n");
-            do {
+            do {                                                //permet de temporiser le 2éme paramètre
                 scanf("%c", &parametre_allumage);
             } while (parametre_allumage == '\n');
             write_script('2',parametre_allumage);
@@ -54,7 +54,7 @@ void afficher_menus(){
             write_script('7','0');
             break;
 
-        default://retour au choix
+        default://retour au choix, dans le cas ou le choix est invalide.
             printf("Choix invalide\n\n\n");
             afficher_menus();
             break;

@@ -5,6 +5,6 @@
 
 
 int main() {
-    afficher_menus();
+    afficher_menus(); //Fonction permettant d'afficher le menus
     return 0;
 }
