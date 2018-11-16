@@ -5,14 +5,15 @@
 
 int menu_principal(){
   int c;                                                                         // Variable du choix.
-  printf("Choisissez une action à effectuer:\n", );
-  printf("1- Afficher les mesusres.\n", );
-  printf("2- Classer et afficher par pouls.\n", );
-  printf("3- Classer et afficher par temps.\n", );
-  printf("4- Effectuer une recherche en fonction du temps.\n", );
-  printf("5- Afficher la moyenne dans une plage de temps.\n", );
-  printf("6- Afficher le nombre de lignes de données.\n", );
-  printf("7- Rechercher et afficher le max et le min.\n", );
+  printf("Choisissez une action à effectuer:\n");
+  printf("1- Afficher les mesusres.\n");
+  printf("2- Classer et afficher par pouls.\n");
+  printf("3- Classer et afficher par temps.\n");
+  printf("4- Effectuer une recherche en fonction du temps.\n");
+  printf("5- Effectuer une recherche en fonction du poul.\n");
+  printf("6- Afficher la moyenne dans une plage de temps.\n");
+  printf("7- Afficher le nombre de lignes de données.\n");
+  printf("8- Rechercher et afficher le max et le min.\n");
   printf("\tChoix : ");
   scanf("%d",&c );
   printf("\n\n");

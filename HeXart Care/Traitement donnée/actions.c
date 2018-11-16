@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib>
+#include "action.h"
 
 /*
 void tri(Ligne *tab, int n) {
