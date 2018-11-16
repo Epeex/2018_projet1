@@ -3,7 +3,7 @@
 
 #include <stdlib.h>
 #include <stdio.h>
-
+#include "action.c"
 
 void tri_croissant_pouls(Ligne *tab, int const n);
 void tri_decroissant_pouls(Ligne *tab, int const n);

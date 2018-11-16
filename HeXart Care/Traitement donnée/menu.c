@@ -3,6 +3,7 @@
 #include "menu.h"
 
 
+
 int menu_principal(){
   int c;                                                                         // Variable du choix.
   printf("Choisissez une action à effectuer:\n");

@@ -2,6 +2,7 @@
 #define menuh
 
 #include <stdio.h>
+#include "menu.c"
 
 int menu_principal();
 int menu_2();
