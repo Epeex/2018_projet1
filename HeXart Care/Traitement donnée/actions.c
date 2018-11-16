@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <stdlib>
+#include "action.h"
 
-/*
 void tri(Ligne *tab, int n) {
 
-}*/
+}
 
 int searchmilis(Ligne *tab,int n,int milis,int *tabrep,int nrep) { //Fonction pour recherche miliseconde sequenciel, tab=tableau de structure de donnes, n= taille du tableau, milis=temp a chercher, tabrep=liste vide ou serons ajouter les valeurs ou la recherche a trouver milis, nrep=taille tableau de reponce. renvoie le nombre de resultat trouver
 	int x=0;
@@ -64,4 +64,12 @@ int searchpoulborn(Ligne *tab,int n,int poulinf,int poulsup,int *tabrep,int nrep
 		}
 	}
 	return x-1;
+}
+
+
+
+void (Ligne *tab, int n){
+	for (size_t i = 0; i < n; i++) {
+		printf("%d;%d\n",tab[i].temps, tab[i].poul );
+	}
 }
