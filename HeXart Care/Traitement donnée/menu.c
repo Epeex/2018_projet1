@@ -14,7 +14,7 @@ int menu_principal(){
   printf("6- Afficher la moyenne dans une plage de temps.\n");
   printf("7- Afficher le nombre de lignes de données.\n");
   printf("8- Rechercher et afficher le max et le min.\n");
-  printf("0- Quitter le menu");
+  printf("0- Quitter le menu\n");
   printf("\tChoix : ");
   scanf("%d",&c );
   printf("\n\n");
