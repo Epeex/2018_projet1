@@ -146,7 +146,7 @@ int searchpoul(Ligne *tab,int n,int poul,int *tabrep,int nrep) { //Fonction pour
 	return x-1;
 }
 
-float moyenne(Ligne *tab,int n, int borninf, int bornsup) {
+float moyenne(Ligne *tab,int n, int borninf, int bornsup) {//Renvoie la moyenne des éléments du tableau entre la borne infèrieur et supèrieur
 	if (borninf>=0 && bornsup<=n && borninf<bornsup) {
 		int somme=0,diviseur=0;
 		for (int i=0;i<n;i++) {
@@ -165,7 +165,7 @@ float moyenne(Ligne *tab,int n, int borninf, int bornsup) {
 	}
 }
 
-void min_max(Ligne *tab, int n, int *min, int *max) {
+void min_max(Ligne *tab, int n, int *min, int *max) {// change la valeur de min et max pour y affecter le minimum et maximum du poul de tableau donnée en entrer
 	for (int i=0;i<n;i++) {
 		if (tab[i].poul>*max) {
 			*max=tab[i].poul;
@@ -176,7 +176,7 @@ void min_max(Ligne *tab, int n, int *min, int *max) {
 }
 
 
-void print_tab(Ligne *tab, int n){
+void print_tab(Ligne *tab, int n){//affiche je tableau donnée en entrer
 	for (size_t i = 0; i < n; i++) {
 		printf("%d - %d; %d\n",i,tab[i].temp, tab[i].poul );
 	}
