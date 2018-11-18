@@ -1,7 +1,4 @@
-void all_on();
-void one_on_x_on();
-void one_on();
-void chenille();
-void loading();
-void tourn();
-void load();
+#include <stdlib.h>
+#include <stdio.h>
+
+void afficher_menus(); //prototype de la fonction afficher menus

@@ -1,11 +1,16 @@
+#ifndef Donneesh
+#define Donneesh
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <math.h>
 #include <string.h>
+#include "Donnees.c"
 
-typedef struct Ligne {
-	int temp;
-	int poul;
-} Ligne;
+//Manipulation
+
+
 
 int lectureCsv(Ligne*); //Sort la taille du tableau
+
+#endif
