@@ -1,4 +1,5 @@
 #include "param.h"
+#include "coeur.h"
 #include <Arduino.h>
 
 int _var_load = 9; //Variable globale nécessaire a la fonction load
