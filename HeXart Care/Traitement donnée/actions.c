@@ -6,7 +6,7 @@
 
 
 
-void tri_croissant_pouls(Ligne *tab, int const n){
+void tri_croissant_pouls(Ligne *Tableau, int const n){
 	/* Booléen marquant l'arrêt du tri si le tableau est ordonné */
 	int en_desordre = TRUE;
 	/* Boucle de répétition du tri et le test qui
@@ -19,12 +19,66 @@ void tri_croissant_pouls(Ligne *tab, int const n){
 		for (int j = 0; j < n-1; j++)
 		{
 			/* Si les 2 éléments sont mal triés */
-			if(tab[j].poul > tab[j+1].poul)
+			if(Tableau[j].poul > Tableau[j+1].poul)
 			{
 				/* Inversion des 2 éléments */
- 				int tmp = tab[j+1].poul;
- 				tab[j+1].poul = tab[j].poul;
- 				tab[j].poul = tmp;
+ 				int tmp = Tableau[j+1].poul;
+ 				Tableau[j+1].poul = Tableau[j].poul;
+ 				Tableau[j].poul = tmp;
+ 				/* Le tableau n'est toujours pas trié */
+				en_desordre = TRUE;
+ 			}
+		}
+	}
+}
+
+
+void tri_decroissant_pouls(Ligne *Tableau, int const n){
+	/* Booléen marquant l'arrêt du tri si le tableau est ordonné */
+	int en_desordre = TRUE;
+	/* Boucle de répétition du tri et le test qui
+	 arrête le tri dès que le tableau est ordonné(en_desordre=FALSE) */
+	while (en_desordre)
+	{
+		/* Supposons le tableau ordonné */
+		en_desordre = FALSE;
+		/* Vérification des éléments des places j et j+1 */
+		for (int j = 0; j < n-1; j++)
+		{
+			/* Si les 2 éléments sont mal triés */
+			if(Tableau[j].poul < Tableau[j+1].poul)
+			{
+				/* Inversion des 2 éléments */
+ 				int tmp = Tableau[j+1].poul;
+ 				Tableau[j+1].poul = Tableau[j].poul;
+ 				Tableau[j].poul = tmp;
+
+ 				/* Le tableau n'est toujours pas trié */
+				en_desordre = TRUE;
+ 			}
+		}
+	}
+}
+
+void tri_croissant_temps(Ligne *Tableau, int const n){
+	/* Booléen marquant l'arrêt du tri si le tableau est ordonné */
+	int en_desordre = TRUE;
+	/* Boucle de répétition du tri et le test qui
+	 arrête le tri dès que le tableau est ordonné(en_desordre=FALSE) */
+	while (en_desordre)
+	{
+		/* Supposons le tableau ordonné */
+		en_desordre = FALSE;
+		/* Vérification des éléments des places j et j+1 */
+		for (int j = 0; j < n-1; j++)
+		{
+			/* Si les 2 éléments sont mal triés */
+			if(Tableau[j].temp > Tableau[j+1].temp)
+			{
+				/* Inversion des 2 éléments */
+ 				int tmp = Tableau[j+1].temp;
+ 				Tableau[j+1].temp = Tableau[j].temp;
+ 				Tableau[j].temp = tmp;
 
  				/* Le tableau n'est toujours pas trié */
 				en_desordre = TRUE;
@@ -34,7 +88,7 @@ void tri_croissant_pouls(Ligne *tab, int const n){
 }
 
 
-void tri_decroissant_pouls(Ligne *tab, int const n){
+void tri_decroissant_temps(Ligne *Tableau, int const n){
 	/* Booléen marquant l'arrêt du tri si le tableau est ordonné */
 	int en_desordre = TRUE;
 	/* Boucle de répétition du tri et le test qui
@@ -47,67 +101,12 @@ void tri_decroissant_pouls(Ligne *tab, int const n){
 		for (int j = 0; j < n-1; j++)
 		{
 			/* Si les 2 éléments sont mal triés */
-			if(tab[j].poul < tab[j+1].poul)
+			if(Tableau[j].temp < Tableau[j+1].temp)
 			{
 				/* Inversion des 2 éléments */
- 				int tmp = tab[j+1].poul;
- 				tab[j+1].poul = tab[j].poul;
- 				tab[j].poul = tmp;
-
- 				/* Le tableau n'est toujours pas trié */
-				en_desordre = TRUE;
- 			}
-		}
-	}
-}
-
-void tri_croissant_temps(Ligne *tab, int const n){
-	/* Booléen marquant l'arrêt du tri si le tableau est ordonné */
-	int en_desordre = TRUE;
-	/* Boucle de répétition du tri et le test qui
-	 arrête le tri dès que le tableau est ordonné(en_desordre=FALSE) */
-	while (en_desordre)
-	{
-		/* Supposons le tableau ordonné */
-		en_desordre = FALSE;
-		/* Vérification des éléments des places j et j+1 */
-		for (int j = 0; j < n-1; j++)
-		{
-			/* Si les 2 éléments sont mal triés */
-			if(tab[j].temp > tab[j+1].temp)
-			{
-				/* Inversion des 2 éléments */
- 				int tmp = tab[j+1].temp;
- 				tab[j+1].temp = tab[j].temp;
- 				tab[j].temp = tmp;
-
- 				/* Le tableau n'est toujours pas trié */
-				en_desordre = TRUE;
- 			}
-		}
-	}
-}
-
-
-void tri_decroissant_temps(Ligne *tab, int const n){
-	/* Booléen marquant l'arrêt du tri si le tableau est ordonné */
-	int en_desordre = TRUE;
-	/* Boucle de répétition du tri et le test qui
-	 arrête le tri dès que le tableau est ordonné(en_desordre=FALSE) */
-	while (en_desordre)
-	{
-		/* Supposons le tableau ordonné */
-		en_desordre = FALSE;
-		/* Vérification des éléments des places j et j+1 */
-		for (int j = 0; j < n-1; j++)
-		{
-			/* Si les 2 éléments sont mal triés */
-			if(tab[j].temp < tab[j+1].temp)
-			{
-				/* Inversion des 2 éléments */
- 				int tmp = tab[j+1].temp;
- 				tab[j+1].temp = tab[j].temp;
- 				tab[j].temp = tmp;
+ 				int tmp = Tableau[j+1].temp;
+ 				Tableau[j+1].temp = Tableau[j].temp;
+ 				Tableau[j].temp = tmp;
 
  				/* Le tableau n'est toujours pas trié */
 				en_desordre = TRUE;

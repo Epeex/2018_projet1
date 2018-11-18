@@ -5,10 +5,10 @@
 #include <stdio.h>
 #include "actions.c"
 
-void tri_croissant_pouls(Ligne *tab, int const n);
-void tri_decroissant_pouls(Ligne *tab, int const n);
-void tri_croissant_temps(Ligne *tab, int const n);
-void tri_decroissant_temps(Ligne *tab, int const n);
+void tri_croissant_pouls(Ligne *Tableau, int const n);
+void tri_decroissant_pouls(Ligne *Tableau, int const n);
+void tri_croissant_temps(Ligne *Tableau, int const n);
+void tri_decroissant_temps(Ligne *Tableau, int const n);
 
 int searchmilis(Ligne*,int,int,int*,int);
 int searchpoul(Ligne*,int,int,int*,int);
